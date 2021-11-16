@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+/* 修改模态框 出现的位置 */
+.modal.fade.in {
+	top: 90px;
+}
+
+/* 修改模态框的大小 */
+.modal-dialog {
+	width:300px;
+}
+
+.modal-header {
+	height: 40px;
+}
+
+#display {
+	margin-bottom: 3px;
+	text-align: right;
+}
+
+tr {
+	margin-top: 5px;
+}
+
+td {
+	width: 80px;
+	line-height: 35px;
+	text-align: center;
+}
+
+.numBtn {
+	font-size: 15px;
+	margin-top: 3px;
+	width: 97%;
+}

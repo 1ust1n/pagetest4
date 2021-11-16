@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">计算器</button>
+
+
+		<!-- 模态框（Modal） -->
+		<!-- backdrop："static"  指的是点击背景空白处不被关闭；
+		     keyboard:false   指的是触发键盘esc事件时不关闭。 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true" data-backdrop="static" data-keyboard="false">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close " data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+						<table>
+							<thead>
+								<tr>
+									<td colspan="4"><input type="text" class="form-control" id="display" onkeydown="if(event.keyCode==13)calcu();"/></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="2"><input type="button" class="numBtn" value="AC" onclick="remove()" /></td>
+									<td colspan="2"><input type="button" class="numBtn" value="DEL" onclick="removeOne()" /></td>
+								</tr>
+								<tr>
+									<td><input type="button" class="numBtn" value="7" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="8" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="9" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="+" onclick="getValue(this.value)"/></td>
+								</tr>
+								<tr>
+									<td><input type="button" class="numBtn" value="4" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="5" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="6" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="-" onclick="getValue(this.value)"/></td>
+								</tr>
+								<tr>
+									<td><input type="button" class="numBtn" value="1" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="2" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="3" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="*" onclick="getValue(this.value)"/></td>
+								</tr>
+								<tr>
+									<td><input type="button" class="numBtn" value="0" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="." onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="/" onclick="getValue(this.value)"/></td>
+									<td><input type="button" class="numBtn" value="=" onclick="calcu()"/></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+
+		<script src="js/jquery-3.4.1.js"></script>
+		<script src="js/index.js" type="text/javascript"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>
